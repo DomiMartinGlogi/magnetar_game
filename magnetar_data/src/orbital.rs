@@ -16,6 +16,7 @@ pub struct OrbitalParameters {
 }
 
 impl OrbitalParameters {
+    /// Calculates the Objects next position in Orbit and moves it there.
     pub fn step_forward(&mut self, time_step: Duration) {
         if self.semi_major_axis == 0.0 {
             return;
@@ -24,6 +25,5 @@ impl OrbitalParameters {
         let mean_motion = (360.0) / (self.semi_major_axis.powf(1.5)); // Replace 2π with 360
         self.mean_anomaly += mean_motion * time_seconds;
         self.mean_anomaly = self.mean_anomaly % 360.0; // Keep within 0 to 360 degrees
-        
     } 
 }

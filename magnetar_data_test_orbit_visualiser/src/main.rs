@@ -39,7 +39,6 @@ fn render_object_block(object: &Object, indent: usize) -> Vec<String> {
     let indent_str = " ".repeat(indent);
     // First line: object name.
     lines.push(format!("{}- {}", indent_str, object.name));
-    // Second line: mean anomaly (stored in degrees).
     lines.push(format!("{}  Mean Anomaly: {:.3}°", indent_str, object.orbital_params.mean_anomaly));
     // Append each child's block (with increased indent) immediately after the parent.
     for child in &object.children {
