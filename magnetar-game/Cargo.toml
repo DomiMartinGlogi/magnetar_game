@@ -1,0 +1,11 @@
+[package]
+name = "magnetar-game"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+magnetar_data = {path = "../magnetar_data"}
+bevy = "0.15.2"
+bevy_prototype_lyon = "0.13.0"

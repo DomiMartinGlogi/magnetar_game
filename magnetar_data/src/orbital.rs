@@ -2,7 +2,7 @@ use std::time::Duration;
 use std::f64::consts::PI;
 use serde::Deserialize;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone, Copy)]
 /// Represents an Objects Orbital Parameters
 pub struct OrbitalParameters {
     /// Semi Major Axis in km

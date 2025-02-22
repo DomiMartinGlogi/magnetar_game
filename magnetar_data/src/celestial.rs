@@ -1,9 +1,9 @@
 use std::collections::HashMap;
 use std::time::Duration;
 use serde::Deserialize;
-pub(crate) use crate::orbital::OrbitalParameters;
+pub use crate::orbital::OrbitalParameters;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone, Copy)]
 /// Enum for all Object types
 pub enum ObjectType {
     /// Denotes a given object is a star
@@ -16,7 +16,7 @@ pub enum ObjectType {
     IceGiant
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 /// Represents a given Celestial Object such as a Star, Planet or Asteroid
 /// All of these are basically handled the same way
 pub struct Object {

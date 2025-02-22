@@ -1,5 +1,5 @@
 pub mod celestial;
-mod orbital;
+pub mod orbital;
 pub mod yaml_parser;
 
 pub fn add(left: usize, right: usize) -> usize {
